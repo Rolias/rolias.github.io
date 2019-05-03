@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
 <meta property="og:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T16:25:39.307Z">
+<meta property="og:updated_time" content="2019-05-03T16:28:17.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Don&#39;t use `export default` in TypeScript">
 <meta name="twitter:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
@@ -97,12 +97,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
 <p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br></pre></td></tr></table></figure>
-<p>In his <a href="https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default" target="_blank" rel="noopener">stack<strong>overflow</strong> answer</a> Simon Chan pointed out a nice workaround but as nice as that is, I think I’ll stick with not having a default export.</p>
+<p>In his <a href="https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default" target="_blank" rel="noopener">stack<strong>overflow</strong> answer</a> Simon Chan pointed out a nice workaround but as nice as that is, I think I’ll stick with not using <code>export default</code>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjv8ai97x0000v4s0tjcccvrs" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjv8alkcj00006qs073xohe9a" class="article-share-link">Share</a>
       
         <a href="http://rolias.github.io/2019/05/02/first-post/#disqus_thread" class="article-comment-link">Comments</a>
       
