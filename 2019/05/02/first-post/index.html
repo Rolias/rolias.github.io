@@ -5,19 +5,19 @@
   
 
   
-  <title>Don&#39;t use export default in TypeScript | Tod&#39;s Tech Tomes</title>
+  <title>Don&#39;t use `export default` in TypeScript | Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
 <meta name="keywords" content="programming,typescript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Don&#39;t use export default in TypeScript">
+<meta property="og:title" content="Don&#39;t use `export default` in TypeScript">
 <meta property="og:url" content="http://rolias.github.io/2019/05/02/first-post/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
 <meta property="og:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T02:39:30.943Z">
+<meta property="og:updated_time" content="2019-05-03T16:23:57.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Don&#39;t use export default in TypeScript">
+<meta name="twitter:title" content="Don&#39;t use `export default` in TypeScript">
 <meta name="twitter:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
   
     <link rel="alternate" href="/atom.xml" title="Tod&#39;s Tech Tomes" type="application/atom+xml">
@@ -43,7 +43,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Thoughts on Programming and Audio/Video Production</a>
+          <a href="/" id="subtitle">Thoughts on Programming</a>
         </h2>
       
     </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Don&#39;t use export default in TypeScript
+      Don&#39;t use `export default` in TypeScript
     </h1>
   
 
@@ -92,14 +92,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>I was working on an <a href="https://www.npmjs.com/package/trello-helper" target="_blank" rel="noopener">npm package</a> written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using <code>export default</code> works fine in TypeScript. Consuming a default class looks like this:</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br><span class="line"><span class="string">`"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The JavaScript users are not so lucky,  they need to add a reference to the export named "default."</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The JavaScript users are not so lucky,  they need to add a reference to the export named "default."</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
 <p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br><span class="line"><span class="string">`"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In his [stack**overflow** answer](https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default) Simon Chan pointed out a nice workaround but as nice as that is, I think I'll stick with not having a default export.</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjv7h1t1z0000uss0p5ddcxwr" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjv8ag1400000s2s0o0v6ox33" class="article-share-link">Share</a>
       
         <a href="http://rolias.github.io/2019/05/02/first-post/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -162,7 +162,7 @@
       <ul>
         
           <li>
-            <a href="/2019/05/02/first-post/">Don&#39;t use export default in TypeScript</a>
+            <a href="/2019/05/02/first-post/">Don&#39;t use `export default` in TypeScript</a>
           </li>
         
       </ul>
