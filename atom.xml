@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tod&#39;s Tech Tomes</title>
+  
+  <subtitle>Thoughts on Programming and Audio/Video Production</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://rolias.github.io/"/>
+  <updated>2019-05-03T02:39:30.943Z</updated>
+  <id>http://rolias.github.io/</id>
+  
+  <author>
+    <name>Tod Gentille</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Don&#39;t use export default in TypeScript</title>
+    <link href="http://rolias.github.io/2019/05/02/first-post/"/>
+    <id>http://rolias.github.io/2019/05/02/first-post/</id>
+    <published>2019-05-03T01:44:20.000Z</published>
+    <updated>2019-05-03T02:39:30.943Z</updated>
+    
+    <content type="html"><![CDATA[<p>I was working on an <a href="https://www.npmjs.com/package/trello-helper" target="_blank" rel="noopener">npm package</a> written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using <code>export default</code> works fine in TypeScript. Consuming a default class looks like this:</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br><span class="line"><span class="string">`"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">The JavaScript users are not so lucky,  they need to add a reference to the export named "default."</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure><p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br><span class="line"><span class="string">`"</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In his [stack**overflow** answer](https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default) Simon Chan pointed out a nice workaround but as nice as that is, I think I'll stick with not having a default export.</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;I was working on an &lt;a href=&quot;https://www.npmjs.com/package/trello-helper&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;npm package&lt;/a&gt; written in TypeS
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="http://rolias.github.io/tags/programming/"/>
+    
+      <category term="typescript" scheme="http://rolias.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+</feed>
