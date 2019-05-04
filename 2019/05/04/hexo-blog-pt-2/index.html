@@ -5,20 +5,19 @@
   
 
   
-  <title>Don&#39;t use `export default` in TypeScript | Tod&#39;s Tech Tomes</title>
+  <title>Storing the Hexo Site in GitHub | Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
-<meta name="keywords" content="programming,typescript">
+  <meta name="description" content="Now that you have your blog up and published on your [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Don&#39;t use `export default` in TypeScript">
-<meta property="og:url" content="http://rolias.github.io/2019/05/02/first-post/index.html">
+<meta property="og:title" content="Storing the Hexo Site in GitHub">
+<meta property="og:url" content="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
-<meta property="og:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
+<meta property="og:description" content="Now that you have your blog up and published on your [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T16:29:46.659Z">
+<meta property="og:updated_time" content="2019-05-04T22:14:00.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Don&#39;t use `export default` in TypeScript">
-<meta name="twitter:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
+<meta name="twitter:title" content="Storing the Hexo Site in GitHub">
+<meta name="twitter:description" content="Now that you have your blog up and published on your [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.">
   
     <link rel="alternate" href="/atom.xml" title="Tod&#39;s Tech Tomes" type="application/atom+xml">
   
@@ -69,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first-post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-blog-pt-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/02/first-post/" class="article-date">
-  <time datetime="2019-05-03T01:44:20.000Z" itemprop="datePublished">2019-05-02</time>
+    <a href="/2019/05/04/hexo-blog-pt-2/" class="article-date">
+  <time datetime="2019-05-04T20:59:19.000Z" itemprop="datePublished">2019-05-04</time>
 </a>
     
   </div>
@@ -83,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Don&#39;t use `export default` in TypeScript
+      Storing the Hexo Site in GitHub
     </h1>
   
 
@@ -91,37 +90,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I was working on an <a href="https://www.npmjs.com/package/trello-helper" target="_blank" rel="noopener">npm package</a> written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using <code>export default</code> works fine in TypeScript. Consuming a default class looks like this:</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br></pre></td></tr></table></figure>
-<p>The JavaScript users are not so lucky, they need to add a reference to the export named “default.”</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
-<p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br></pre></td></tr></table></figure>
-<p>In his <a href="https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default" target="_blank" rel="noopener">stack<strong>overflow</strong> answer</a> to my question around the need for <code>.default</code>, Simon Chan pointed out a nice workaround. As nice as that workaround is, I think I’ll stick with not using <code>export default</code>.</p>
+        <p>Now that you have your blog up and published on your [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.  </p>
+<h2 id="1-Create-a-New-Repository"><a href="#1-Create-a-New-Repository" class="headerlink" title="1. Create a New Repository"></a>1. Create a New Repository</h2><p>Create a new repository in GitHub. Don’t add a <code>ReadMe</code> to it; just create the empty repository.  GitHub will show you a section titled</p>
+<h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><p>  Underneath that are two commands that you can copy to the clipboard with the clipboard icon to the right.  We’ll use these commands after the next step.</p>
+<h2 id="2-git-init-finally"><a href="#2-git-init-finally" class="headerlink" title="2. git init (finally)"></a>2. git init (finally)</h2><p>Open a terminal window at the root level of your hexo site. NOW you can do a <code>git init</code>,  then add all your files, and do a normal commit. You’ll notice that the previous process of setting up Hexo did create a <code>.gitignore</code> file for you that will ignore all the generated files.  </p>
+<h2 id="3-Link-and-Sync"><a href="#3-Link-and-Sync" class="headerlink" title="3. Link and Sync"></a>3. Link and Sync</h2><p>Take the copied commands from GitHub and paste those into the terminal. This will both link your local repo to GitHub and push up the changes.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjva2w4xh0005wfs0ucfijslh" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/" data-id="cjva2w4wz0001wfs0vouz23ou" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/05/03/using-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Blogging with Hexo and GitHub Pages
-        
-      </div>
-    </a>
   
+    <a href="/2019/05/03/using-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Blogging with Hexo and GitHub Pages</div>
+    </a>
   
 </nav>
 

@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
 <meta property="og:description" content="I just started using Hexo for this blog, and I had a little trouble getting started. Mostly my normal node.js coding process got in the way. I created a folder for the project, did a git init and star">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-04T01:55:05.415Z">
+<meta property="og:updated_time" content="2019-05-04T22:18:18.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blogging with Hexo and GitHub Pages">
 <meta name="twitter:description" content="I just started using Hexo for this blog, and I had a little trouble getting started. Mostly my normal node.js coding process got in the way. I created a folder for the project, did a git init and star">
@@ -97,37 +97,34 @@
 <h3 id="3-Fire-it-up"><a href="#3-Fire-it-up" class="headerlink" title="3. Fire it up"></a>3. Fire it up</h3><p>Move into the newly created folder and then do an npm install.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> [username].github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <h3 id="4-Configure-the-project-title-author-and-timezone"><a href="#4-Configure-the-project-title-author-and-timezone" class="headerlink" title="4. Configure the project title, author and timezone"></a>4. Configure the project title, author and timezone</h3><p>Use your favorite code editor and edit the <code>_config.yml</code> file. I prefer VS Code so at this point in the terminal I type <code>code .</code> and that loads the project. Near the top, you’ll see the <code>#Site</code> section. Put in the title for your blog, the subtitle (if you use one), and put your name in the <code>author:</code> entry.  </p>
-<ul>
-<li><strong>Tip</strong> - Make sure you leave a space after the : for each entry.  </li>
-</ul>
+<div class="bug"> <strong>Warning</strong> - If you don’t leave a space after the : for each entry the generator will complain.  </div>
+
 <p>In the timezone, you need to put a <a href="https://momentjs.com/timezone/" target="_blank" rel="noopener">moment compatible timezone</a>. Using their site click on the map to get the string needed for your timezone. For example, here on the west coast of the U.S., I use <code>America/Los Angeles.</code></p>
 <p>A little lower you’ll see the <code># URL</code> section. Enter your information for the <code>url:</code> entry. <code>http://[username].github.io/</code>.</p>
-<ul>
-<li><strong>VSCode Tip</strong> - I love the built-in terminal window <code>View→Terminal (⌃`).</code> I like it so much I use two of them by using either the split terminal icon or the <code>⌘\</code> shortcut. Having two windows helps because we’re going to dedicate one terminal to run the server, but we want to issue Hexo terminal commands in the other pane.</li>
-</ul>
+<div class="tip"><strong>VSCode Tip</strong> - I love the built-in terminal window <code>View→Terminal (⌃`).</code> I like it so much I use two of them by using either the split terminal icon or the <code>⌘\</code> shortcut. Having two windows helps because we’re going to dedicate one terminal to run the server, but we want to issue Hexo terminal commands in the other pane.</div>
+
 <h3 id="5-Start-the-test-server"><a href="#5-Start-the-test-server" class="headerlink" title="5. Start the test server"></a>5. Start the test server</h3><p>In the terminal type <code>hexo server</code> - This isn’t completely necessary, but the odds are good you want to check out on your local server how your post looks before you deploy it up into GitHub. <em>I like to use the right terminal pane in VSCode for this.</em></p>
-<ul>
-<li><strong>Server Tip</strong> - any time you modify the <code>_config.yml</code> file, stop the server with <code>⌃c</code> and restart it to pick up the changes.</li>
-</ul>
+<div class="remember"> <strong>Remember</strong> - any time you modify the <code>_config.yml</code> file, stop the server with <code>⌃c</code> and restart it to pick up the changes.</div>
+
 <h3 id="6-Test-the-site"><a href="#6-Test-the-site" class="headerlink" title="6. Test the site"></a>6. Test the site</h3><p>Open a browser and type in the address bar <code>localhost:4000</code>. Your new site will load and show you the default home page. After the next step, you can feel free to delete the sample default post.</p>
 <h3 id="7-Create-a-New-Post"><a href="#7-Create-a-New-Post" class="headerlink" title="7. Create a New Post"></a>7. Create a New Post</h3><p>In the terminal type</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'Your blog post title'</span></span><br></pre></td></tr></table></figure>
 <p>You’ll get some feedback about the file created in <code>source→_posts</code>. The file will contain the header with the title and date. You can now open that file in your editor and write your post.</p>
-<ul>
-<li><strong>Tip</strong> You’ll probably want to add some tags here. This is also another place to make sure you leave space after the <code>:</code> for each entry.</li>
-</ul>
+<div class="tip"><strong>Tip</strong> - You’ll probably want to add some tags here. This is also another place to make sure you leave space after the <code>:</code> for each entry.</div>
+
 <p>Go back to your browser and hit refresh. My experience is that Hexo will automatically generate the new content on demand. There is also a <code>hexo generate —watch</code> command you can read about in the <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">hexo docs</a>. When your post is ready for the world, go to the next step.</p>
 <h3 id="8-Clean-and-Deploy"><a href="#8-Clean-and-Deploy" class="headerlink" title="8. Clean and Deploy"></a>8. Clean and Deploy</h3><p>You don’t have anything to clean yet, but it’s a good habit to do both every time. Type two commands</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>Go back to your browser and enter <code>https://[username].github.io</code> . Your blog site is live and running in GitHub pages.<br><strong>Script Tip</strong> - You can edit your <code>package.json</code> and add a script that will do both the clean and deploy steps. Add this section</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "deploy": "hexo clean; hexo deploy"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>Go back to your browser and enter <code>https://[username].github.io</code> . Your blog site is live and running in GitHub pages.</p>
+<div class="tip" style="margin-right:50px"><strong>Script Tip</strong> - You can edit your <code>package.json</code> and add a script that will do both the clean and deploy steps. Add this section<br><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "deploy": "hexo clean; hexo deploy"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><br><br></div>
+
 <p>Now from the terminal you can type <code>npm run deploy</code> to deploy your changes to GitHub.</p>
 <h4 id="References-and-Shout-Outs"><a href="#References-and-Shout-Outs" class="headerlink" title="References and Shout Outs"></a>References and Shout Outs</h4><p><a href="https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39" target="_blank" rel="noopener">This gist</a> from btfak - which has a more laconic version of many of these steps.<br><a href="https://www.poweredbyjeff.com/2018/05/14/Deploying-Hexo-website-to-Github-Pages/" target="_blank" rel="noopener">Jeff Ferrari post</a> on taking advantage of the GitHub <code>docs</code> folder to publish posts instead of using your username.github.io page.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/03/using-hexo/" data-id="cjv8uumtl0002xps0766h55v8" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/03/using-hexo/" data-id="cjva2w4x30002wfs0vrkiz2nn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -137,6 +134,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/05/04/hexo-blog-pt-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Storing the Hexo Site in GitHub
+        
+      </div>
+    </a>
   
   
     <a href="/2019/05/02/first-post/" id="article-nav-older" class="article-nav-link-wrap">
@@ -231,6 +237,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/05/04/hexo-blog-pt-2/">Storing the Hexo Site in GitHub</a>
+          </li>
         
           <li>
             <a href="/2019/05/03/using-hexo/">Blogging with Hexo and GitHub Pages</a>

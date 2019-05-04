@@ -504,10 +504,29 @@ body {
 .search-form-submit:focus {
   color: #777;
 }
-.article-entry li {
-  margin-left: -20px;
-  margin-right: 10px;
+.tip:before {
+  content: '\1F989';
+  margin-left: -25px;
+  margin-right: 5px;
+}
+.tip {
+  margin-left: 40px;
+}
+.bug:before {
   content: '\1F41E';
+  margin-left: -25px;
+  margin-right: 5px;
+}
+.bug {
+  margin-left: 40px;
+}
+.remember:before {
+  content: '\1F42C';
+  margin-left: -25px;
+  margin-right: 5px;
+}
+.remember {
+  margin-left: 40px;
 }
 .article {
   margin: 50px 0;
@@ -599,7 +618,7 @@ a.article-title:hover {
 }
 .article-entry li:before {
   content: '\1F41E';
-  margin-left: -30px;
+  margin-left: -50px;
   margin-right: 10px;
 }
 .article-entry ul {
