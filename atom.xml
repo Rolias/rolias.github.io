@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2019-05-04T22:14:00.218Z</updated>
+  <updated>2019-05-04T22:28:37.416Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/"/>
     <id>http://rolias.github.io/2019/05/04/hexo-blog-pt-2/</id>
     <published>2019-05-04T20:59:19.000Z</published>
-    <updated>2019-05-04T22:14:00.218Z</updated>
+    <updated>2019-05-04T22:28:37.416Z</updated>
     
     <content type="html"><![CDATA[<p>Now that you have your blog up and published on your [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.  </p><h2 id="1-Create-a-New-Repository"><a href="#1-Create-a-New-Repository" class="headerlink" title="1. Create a New Repository"></a>1. Create a New Repository</h2><p>Create a new repository in GitHub. Don’t add a <code>ReadMe</code> to it; just create the empty repository.  GitHub will show you a section titled</p><h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><p>  Underneath that are two commands that you can copy to the clipboard with the clipboard icon to the right.  We’ll use these commands after the next step.</p><h2 id="2-git-init-finally"><a href="#2-git-init-finally" class="headerlink" title="2. git init (finally)"></a>2. git init (finally)</h2><p>Open a terminal window at the root level of your hexo site. NOW you can do a <code>git init</code>,  then add all your files, and do a normal commit. You’ll notice that the previous process of setting up Hexo did create a <code>.gitignore</code> file for you that will ignore all the generated files.  </p><h2 id="3-Link-and-Sync"><a href="#3-Link-and-Sync" class="headerlink" title="3. Link and Sync"></a>3. Link and Sync</h2><p>Take the copied commands from GitHub and paste those into the terminal. This will both link your local repo to GitHub and push up the changes.</p>]]></content>
     
@@ -34,6 +34,8 @@
     
     </summary>
     
+    
+      <category term="hexo" scheme="http://rolias.github.io/tags/hexo/"/>
     
   </entry>
   
