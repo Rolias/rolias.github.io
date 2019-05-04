@@ -504,6 +504,11 @@ body {
 .search-form-submit:focus {
   color: #777;
 }
+.article-entry li {
+  margin-left: -20px;
+  margin-right: 10px;
+  content: '\1F41E';
+}
 .article {
   margin: 50px 0;
 }
@@ -592,7 +597,17 @@ a.article-title:hover {
 .article-entry a:hover {
   text-decoration: underline;
 }
-.article-entry ul,
+.article-entry li:before {
+  content: '\1F41E';
+  margin-left: -30px;
+  margin-right: 10px;
+}
+.article-entry ul {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  margin-left: 60px;
+  list-style: none;
+}
 .article-entry ol,
 .article-entry dl {
   margin-top: 1.6em;
@@ -638,6 +653,7 @@ a.article-title:hover {
   padding: 0 0.5em;
 }
 .article-entry .pullquote {
+  content: '\1F41E';
   text-align: left;
   width: 45%;
   margin: 0;
