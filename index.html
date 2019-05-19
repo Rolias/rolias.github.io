@@ -91,7 +91,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Now that you learned in Part 1 <a href="https://rolias.github.io/2019/05/03/using-hexo/">Blogging with Hexo and GitHubPages</a> how to get your site up on [username].github.io site, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.  </p>
+        <p>Now that you learned in Part 1 -&gt; <a href="https://rolias.github.io/2019/05/03/using-hexo/">Blogging with Hexo and GitHubPages</a> how to get your site up on <code>[username].github.io</code>, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.  </p>
 <h2 id="1-Create-a-New-Repository"><a href="#1-Create-a-New-Repository" class="headerlink" title="1. Create a New Repository"></a>1. Create a New Repository</h2><p>Create a new repository in GitHub. Don’t add a <code>ReadMe</code> to it; just create the empty repository.  GitHub will show you a section titled</p>
 <h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><p>  Underneath that are two commands that you can copy to the clipboard with the clipboard icon to the right.  We’ll use these commands after the next step.</p>
 <h2 id="2-git-init-finally"><a href="#2-git-init-finally" class="headerlink" title="2. git init (finally)"></a>2. git init (finally)</h2><p>Open a terminal window at the root level of your hexo site. NOW you can do a <code>git init</code>,  then add all your files, and do a normal commit. You’ll notice that the previous process of setting up Hexo did create a <code>.gitignore</code> file for you that will ignore all the generated files.  </p>
@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/" data-id="cjvvhorqb0001tts0jte3ciot" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/" data-id="cjvvi2mcb0001l3s074ybd2em" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -158,7 +158,7 @@
 <p>Go back to your browser and hit refresh. My experience is that Hexo will automatically generate the new content on demand. There is also a <code>hexo generate —watch</code> command you can read about in the <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">hexo docs</a>. When your post is ready for the world, go to the next step.</p>
 <h3 id="8-Clean-and-Deploy"><a href="#8-Clean-and-Deploy" class="headerlink" title="8. Clean and Deploy"></a>8. Clean and Deploy</h3><p>You don’t have anything to clean yet, but it’s a good habit to do both every time. Type two commands</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>Go back to your browser and enter <code>https://[username].github.io</code> . Your blog site is live and running in GitHub pages.</p>
+<p>Go back to your browser and enter <code>https://[username].github.io</code> . Your blog site is live and running in GitHub pages. Well almost. It can take a couple of minutes before GitHub catches up and pushes your changes live. Another reason to use a test server. </p>
 <div class="tip" style="margin-right:50px"><strong>Script Tip</strong> - You can edit your <code>package.json</code> and add a script that will do both the clean and deploy steps. Add this section<br><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "deploy": "hexo clean; hexo deploy"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><br><br></div>
 
 <p>Now from the terminal you can type <code>npm run deploy</code> to deploy your changes to GitHub.</p>
@@ -168,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/03/using-hexo/" data-id="cjvvhorqf0002tts0bqgphw53" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/03/using-hexo/" data-id="cjvvi2mcf0002l3s00q0z7imk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -213,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjvvhorqw0007tts0l4w1463y" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="cjvvi2mci0004l3s0rdjdfqvh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
