@@ -616,11 +616,6 @@ a.article-title:hover {
 .article-entry a:hover {
   text-decoration: underline;
 }
-.article-entry li:before {
-  content: '\1F41E';
-  margin-left: -50px;
-  margin-right: 10px;
-}
 .article-entry ul {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
