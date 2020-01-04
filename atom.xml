@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2020-01-04T00:00:46.256Z</updated>
+  <updated>2020-01-03T23:59:30.408Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apple Watch and Tennis Score Keeping</title>
+    <link href="http://rolias.github.io/2020/01/03/tennis-score/"/>
+    <id>http://rolias.github.io/2020/01/03/tennis-score/</id>
+    <published>2020-01-03T23:59:30.408Z</published>
+    <updated>2020-01-03T23:59:30.408Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/tennis-score.jpg" alt="Tennis Scoring"><br>I found it surprisingly hard to find an Apple Watch app for keeping score in a tennis game. Most of the apps out there want to analyze your swing, or track your workout or find some other way to justify charging you a subscription fee. I just want to remember the score. </p><h2 id="All-Sports-Score-Keeper"><a href="#All-Sports-Score-Keeper" class="headerlink" title="All Sports Score Keeper"></a>All Sports Score Keeper</h2><p>I eventually found a nice solution that keeps track of both the game score and the set score. It didn’t turn up in most of my searches because I kept using the word <code>Tennis</code> and this app is designed for multiple sports. This turned out to be a nice benefit because I also do a hitting drill with a friend and we play one point at a time until 21. The <strong>All Sports Score Keeper</strong> app can do this with either the <code>Simple Scoring</code> option or the <code>Table Tennis</code> option. Table tennis can use 11 or 21 point scoring so be sure to use the options to configure it. This is also a convenient way to keep track of your bean bag toss game, especially as the afternoon wears on and beer supply starts dwindling.</p><p>For the price of a can of tennis balls, you’ll never forget the score again. Try it for free to make sure it works for you and if so, you’ll likely want the undo and reset features that are available in the paid version. </p><h2 id="Swiping"><a href="#Swiping" class="headerlink" title="Swiping"></a>Swiping</h2><p>You change the score with a simple swipe. At first I thought this was not going to be to my liking but it eliminates the potential for accidentally touching and scoring a point. Plus the concept of swiping towards your opponent when they score and towards yourself when you score is hard to get wrong. </p><h2 id="Free-Version-bug"><a href="#Free-Version-bug" class="headerlink" title="Free Version bug"></a>Free Version bug</h2><p>At the time of this writing, the app is on version 1.4 and there is a small bug that is easy to work around once you understand it. The hamburger menu ☰ shows the various sports you can select. It is off by one. So if you select <code>Tennis</code> you’re going to get <code>Table Tennis</code>. Select the item above the sport you want to get that sport’s scoring.</p><h2 id="Pro-Version-Sync-Issue"><a href="#Pro-Version-Sync-Issue" class="headerlink" title="Pro Version Sync Issue"></a>Pro Version Sync Issue</h2><p>When I paid for the pro version I had a problem getting my watch to recognize the new version. I wrote the developer and he responded almost immediately. The steps I took to correct this were:</p><ol><li>Open the app on the phone</li><li>Open the app on the watch</li><li>Try to undo on the watch (a pro version version feature) and when the app asks you to get the pro version (which you already have) leave that message on the watch. </li><li>Force close the app on your phone (i.e. double-click the home button and swipe up on the app)</li><li>Reopen the app on the phone.</li><li>NOW press OK on the watch to dismiss the dialog</li><li>Try the undo feature again. If it works, you’re all set. </li></ol><p>Once I did this I had no problem with the app.</p><h2 id="Workouts-and-Apps"><a href="#Workouts-and-Apps" class="headerlink" title="Workouts and Apps"></a>Workouts and Apps</h2><p>There is an Apple Watch problem that’s a little problematic. If you start a workout session for your tennis game there is no way to keep the scoring app as the top app. Apple continually gives the workout app that privilege. This is somewhat inconvenient. You can double press the crown to get to the scoring app. I just gave up on tracking my workout. You still get all the credits for steps and exercise you just won’t have things like the heart rate tracking and other nice details. I can’t fault the app or the developer. I have seen similar complaints about other apps and the fact that the workout app gets priority.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/tennis-score.jpg&quot; alt=&quot;Tennis Scoring&quot;&gt;&lt;br&gt;I found it surprisingly hard to find an Apple Watch app for keeping score in
+      
+    
+    </summary>
+    
+    
+      <category term="apple watch" scheme="http://rolias.github.io/tags/apple-watch/"/>
+    
+  </entry>
   
   <entry>
     <title>Apple Watch and Tennis Score Keeping</title>
@@ -30,6 +53,75 @@
       
       
         &lt;p&gt;&lt;img src=&quot;/images/tennis-score.jpg&quot; alt=&quot;Tennis Scoring&quot;&gt;&lt;br&gt;I found it surprisingly hard to find an Apple Watch app for keeping score in
+      
+    
+    </summary>
+    
+    
+      <category term="apple watch" scheme="http://rolias.github.io/tags/apple-watch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Block 3rd Party Cookies in Chrome</title>
+    <link href="http://rolias.github.io/2020/01/03/Block-3rd-Party-Cookies-in-Chrome/"/>
+    <id>http://rolias.github.io/2020/01/03/Block-3rd-Party-Cookies-in-Chrome/</id>
+    <published>2020-01-03T23:39:33.562Z</published>
+    <updated>2020-01-04T00:50:05.082Z</updated>
+    
+    <content type="html"><![CDATA[<p>After reading an <a href="https://jvns.ca/blog/how-tracking-pixels-work/?utm_source=Pointer&amp;utm_campaign=e61d574a3d-ISSUE_167&amp;utm_medium=email&amp;utm_term=0_6ba2b83261-e61d574a3d-590530281" target="_blank" rel="noopener">interesting article on pixel tracking</a> I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google search results refer to old locations for the setting. Here’s a roadmap to the five turns needed to find the proper setting.  </p><p><strong>0.</strong> Open the Chrome settings from the Kebab ⋮ (vertical ellipses) menu in the upper right corner<br><img src="/images/chrome/cookies-pt1.png" alt="Chrome Settings Page"> </p><p><strong>1.</strong> Open the advanced section near the bottom<br><img src="/images/chrome/cookies-pt2.png" alt="Advanced"></p><p><strong>2.</strong> Scroll down and click the<code>Site Settings</code> entry<br><img src="/images/chrome/cookies-pt3.png" alt="Site Settings"></p><p><strong>3.</strong> In the <code>Permissions</code> section click the <code>Cookie and site data</code> entry<br><img src="/images/chrome/cookies-pt4.png" alt="Cookies and site data">  </p><p><strong>4.</strong> In the <code>Cookies and site data</code> enable the slider for <code>Block third-party cookies</code><br><img src="/images/chrome/cookies-pt5.png" alt="Block 3rd party cookies"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;After reading an &lt;a href=&quot;https://jvns.ca/blog/how-tracking-pixels-work/?utm_source=Pointer&amp;amp;utm_campaign=e61d574a3d-ISSUE_167&amp;amp;utm
+      
+    
+    </summary>
+    
+    
+      <category term="privacy" scheme="http://rolias.github.io/tags/privacy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apple Watch and Custom Monograms</title>
+    <link href="http://rolias.github.io/2020/01/02/Apple-Watch-and-Custom-Monograms/"/>
+    <id>http://rolias.github.io/2020/01/02/Apple-Watch-and-Custom-Monograms/</id>
+    <published>2020-01-03T00:57:05.157Z</published>
+    <updated>2020-01-03T23:58:24.420Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/apple-watch.png" alt="Apple watch"><br>I started using a ligature of my initials when I was taking a dive class. We all had similar equipment and the instructor handed out sharpies with instructions to personalize our gear. I’ve used it repeatedly in the ensuing decades. When I got my watch and saw the Monogram feature I thought it would nice to use it there as well. Turns out I got quite lucky. The combination of T and G that I used is a unicode character and the Monogram feature supports unicode. I was able to just cut and paste the unicode I needed in the iPhone Watch app using the <code>Clock</code> option. <a href="https://www.howtogeek.com/238488/how-to-add-custom-characters-to-the-color-apple-watch-faces-monogram/" target="_blank" rel="noopener">How-to Geek</a> has an in-depth article on the process and various ways to use unicode.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/apple-watch.png&quot; alt=&quot;Apple watch&quot;&gt;&lt;br&gt;I started using a ligature of my initials when I was taking a dive class. We all
+      
+    
+    </summary>
+    
+    
+      <category term="apple watch" scheme="http://rolias.github.io/tags/apple-watch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apple Watch and Being on Time</title>
+    <link href="http://rolias.github.io/2020/01/02/on-time/"/>
+    <id>http://rolias.github.io/2020/01/02/on-time/</id>
+    <published>2020-01-03T00:06:11.922Z</published>
+    <updated>2020-01-03T23:58:05.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer would help much but after a couple of decades it still helps me. Until very recently I didn’t realize that a lot of digital watches support this crutch. The Apple Watch is my most recent timepiece and in <code>Settings-&gt;Clock</code> is an option for setting the watch face display time ahead. All that was required was touching the option, and then using the crown to adjust the amount of time from 1-&gt;59 minutes. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I wou
       
     
     </summary>
