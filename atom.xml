@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>Apple Watch and Custom Monograms</title>
+    <link href="http://rolias.github.io/2020/01/02/Apple-Watch-and-Custom-Monograms/"/>
+    <id>http://rolias.github.io/2020/01/02/Apple-Watch-and-Custom-Monograms/</id>
+    <published>2020-01-03T00:57:05.157Z</published>
+    <updated>2020-01-06T22:47:26.057Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/apple-watch.png" alt="Apple watch"><br>I started using a ligature of my initials when I was taking a scuba diving class. We all had similar equipment and the instructor handed out sharpies with instructions to personalize our gear. I’ve used it repeatedly in the ensuing decades. When I got my watch and saw the Monogram feature I thought it would nice to use it there as well. Turns out I got quite lucky. The combination of T and G that I used is a unicode character and the Monogram feature supports unicode. I was able to just cut and paste the unicode I needed in the iPhone Watch app using the <code>Clock</code> option. <a href="https://www.howtogeek.com/238488/how-to-add-custom-characters-to-the-color-apple-watch-faces-monogram/" target="_blank" rel="noopener">How-to Geek</a> has an in-depth article on the process and various ways to use unicode.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/apple-watch.png&quot; alt=&quot;Apple watch&quot;&gt;&lt;br&gt;I started using a ligature of my initials when I was taking a scuba diving class
+      
+    
+    </summary>
+    
+    
+      <category term="apple watch" scheme="http://rolias.github.io/tags/apple-watch/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Apple Watch and Audible Book Syncing</title>
     <link href="http://rolias.github.io/2020/01/02/Apple-Watch-and-Audible/"/>
     <id>http://rolias.github.io/2020/01/02/Apple-Watch-and-Audible/</id>
