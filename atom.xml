@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2020-01-06T22:50:26.654Z</updated>
+  <updated>2020-01-07T19:34:11.213Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Block 3rd Party Cookies in Chrome</title>
+    <link href="http://rolias.github.io/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/"/>
+    <id>http://rolias.github.io/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/</id>
+    <published>2020-01-07T08:00:00.000Z</published>
+    <updated>2020-01-07T19:34:11.213Z</updated>
+    
+    <content type="html"><![CDATA[<p>After reading an <a href="https://jvns.ca/blog/how-tracking-pixels-work/?utm_source=Pointer&amp;utm_campaign=e61d574a3d-ISSUE_167&amp;utm_medium=email&amp;utm_term=0_6ba2b83261-e61d574a3d-590530281" target="_blank" rel="noopener">interesting article on pixel tracking</a> I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google search results refer to old locations for the setting. Here’s a roadmap to the five turns needed to find the proper setting.  </p><p><strong>0.</strong> Open the Chrome settings from the Kebab ⋮ (vertical ellipses) menu in the upper right corner<br><img src="/images/chrome/cookies-pt1.png" alt="Chrome Settings Page"> </p><p><strong>1.</strong> Open the advanced section near the bottom<br><img src="/images/chrome/cookies-pt2.png" alt="Advanced"></p><p><strong>2.</strong> Scroll down and click the<code>Site Settings</code> entry<br><img src="/images/chrome/cookies-pt3.png" alt="Site Settings"></p><p><strong>3.</strong> In the <code>Permissions</code> section click the <code>Cookie and site data</code> entry<br><img src="/images/chrome/cookies-pt4.png" alt="Cookies and site data">  </p><p><strong>4.</strong> In the <code>Cookies and site data</code> enable the slider for <code>Block third-party cookies</code><br><img src="/images/chrome/cookies-pt5.png" alt="Block 3rd party cookies"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;After reading an &lt;a href=&quot;https://jvns.ca/blog/how-tracking-pixels-work/?utm_source=Pointer&amp;amp;utm_campaign=e61d574a3d-ISSUE_167&amp;amp;utm
+      
+    
+    </summary>
+    
+    
+      <category term="privacy" scheme="http://rolias.github.io/tags/privacy/"/>
+    
+  </entry>
   
   <entry>
     <title>Apple Watch and Custom Monograms</title>

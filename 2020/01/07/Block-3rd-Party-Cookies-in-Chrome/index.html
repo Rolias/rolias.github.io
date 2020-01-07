@@ -5,20 +5,26 @@
   
 
   
-  <title>Don&#39;t use `export default` in TypeScript | Tod&#39;s Tech Tomes</title>
+  <title>Block 3rd Party Cookies in Chrome | Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
-<meta name="keywords" content="programming,typescript">
+  <meta name="description" content="After reading an interesting article on pixel tracking I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google">
+<meta name="keywords" content="privacy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Don&#39;t use `export default` in TypeScript">
-<meta property="og:url" content="http://rolias.github.io/2019/05/02/first-post/index.html">
+<meta property="og:title" content="Block 3rd Party Cookies in Chrome">
+<meta property="og:url" content="http://rolias.github.io/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
-<meta property="og:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
+<meta property="og:description" content="After reading an interesting article on pixel tracking I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T16:29:46.659Z">
+<meta property="og:image" content="http://rolias.github.io/images/chrome/cookies-pt1.png">
+<meta property="og:image" content="http://rolias.github.io/images/chrome/cookies-pt2.png">
+<meta property="og:image" content="http://rolias.github.io/images/chrome/cookies-pt3.png">
+<meta property="og:image" content="http://rolias.github.io/images/chrome/cookies-pt4.png">
+<meta property="og:image" content="http://rolias.github.io/images/chrome/cookies-pt5.png">
+<meta property="og:updated_time" content="2020-01-07T19:34:11.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Don&#39;t use `export default` in TypeScript">
-<meta name="twitter:description" content="I was working on an npm package written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using export default works fine in TypeScript. Consu">
+<meta name="twitter:title" content="Block 3rd Party Cookies in Chrome">
+<meta name="twitter:description" content="After reading an interesting article on pixel tracking I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google">
+<meta name="twitter:image" content="http://rolias.github.io/images/chrome/cookies-pt1.png">
   
     <link rel="alternate" href="/atom.xml" title="Tod&#39;s Tech Tomes" type="application/atom+xml">
   
@@ -69,10 +75,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first-post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Block-3rd-Party-Cookies-in-Chrome" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/02/first-post/" class="article-date">
-  <time datetime="2019-05-03T01:44:20.000Z" itemprop="datePublished">2019-05-02</time>
+    <a href="/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/" class="article-date">
+  <time datetime="2020-01-07T08:00:00.000Z" itemprop="datePublished">2020-01-07</time>
 </a>
     
   </div>
@@ -83,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Don&#39;t use `export default` in TypeScript
+      Block 3rd Party Cookies in Chrome
     </h1>
   
 
@@ -91,21 +97,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I was working on an <a href="https://www.npmjs.com/package/trello-helper" target="_blank" rel="noopener">npm package</a> written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using <code>export default</code> works fine in TypeScript. Consuming a default class looks like this:</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br></pre></td></tr></table></figure>
-<p>The JavaScript users are not so lucky, they need to add a reference to the export named “default.”</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
-<p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br></pre></td></tr></table></figure>
-<p>In his <a href="https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default" target="_blank" rel="noopener">stack<strong>overflow</strong> answer</a> to my question around the need for <code>.default</code>, Simon Chan pointed out a nice workaround. As nice as that workaround is, I think I’ll stick with not using <code>export default</code>.</p>
+        <p>After reading an <a href="https://jvns.ca/blog/how-tracking-pixels-work/?utm_source=Pointer&amp;utm_campaign=e61d574a3d-ISSUE_167&amp;utm_medium=email&amp;utm_term=0_6ba2b83261-e61d574a3d-590530281" target="_blank" rel="noopener">interesting article on pixel tracking</a> I thought that surely Chrome has a way to turn of 3rd party cookie tracking. It does but it’s not that easy to reach, and most of the top Google search results refer to old locations for the setting. Here’s a roadmap to the five turns needed to find the proper setting.  </p>
+<p><strong>0.</strong> Open the Chrome settings from the Kebab ⋮ (vertical ellipses) menu in the upper right corner<br><img src="/images/chrome/cookies-pt1.png" alt="Chrome Settings Page"> </p>
+<p><strong>1.</strong> Open the advanced section near the bottom<br><img src="/images/chrome/cookies-pt2.png" alt="Advanced"></p>
+<p><strong>2.</strong> Scroll down and click the<code>Site Settings</code> entry<br><img src="/images/chrome/cookies-pt3.png" alt="Site Settings"></p>
+<p><strong>3.</strong> In the <code>Permissions</code> section click the <code>Cookie and site data</code> entry<br><img src="/images/chrome/cookies-pt4.png" alt="Cookies and site data">  </p>
+<p><strong>4.</strong> In the <code>Cookies and site data</code> enable the slider for <code>Block third-party cookies</code><br><img src="/images/chrome/cookies-pt5.png" alt="Block 3rd party cookies"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="ck549vw9t0004yqs0snpwkoto" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/" data-id="ck549vw9p0002yqs0qfgjb8jt" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/">privacy</a></li></ul>
 
     </footer>
   </div>
@@ -113,15 +118,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/05/03/using-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Blogging with Hexo and GitHub Pages
-        
-      </div>
-    </a>
   
+    <a href="/2020/01/06/Apple-Watch-and-Custom-Monograms/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Apple Watch and Custom Monograms</div>
+    </a>
   
 </nav>
 
