@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2020-01-07T19:36:33.443Z</updated>
+  <updated>2020-01-08T19:20:13.960Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code File Explorer Indent Level</title>
+    <link href="http://rolias.github.io/2020/01/08/VS-Code-File-Explorer-Indent-Level/"/>
+    <id>http://rolias.github.io/2020/01/08/VS-Code-File-Explorer-Indent-Level/</id>
+    <published>2020-01-08T08:00:00.000Z</published>
+    <updated>2020-01-08T19:20:13.960Z</updated>
+    
+    <content type="html"><![CDATA[<p>In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my old eyes. When I went to the settings I couldn’t find the option to adjust it. Then I went a-googling and found some .css hack workarounds but those results were over a year old. A little more searching revealed that it’s now a configurable feature.  </p><ol><li>Open the  Settings (Code-&gt;Preference-&gt;Settings or <code>⌘,</code> on macOs)</li><li>Search with <code>tree indent</code></li><li>You should see <code>Workbench-&gt;Tree: Indent</code></li><li>Change the default value to one more to your liking. I found that 20 was a better balance of indentation visibility and horizontal space usage.</li></ol><h2 id="8-Pixels"><a href="#8-Pixels" class="headerlink" title="8 Pixels"></a>8 Pixels</h2><p><img src="/images/vscodeIndentBefore.png" alt="With 8 pixel indentation"></p><h2 id="20-Pixels"><a href="#20-Pixels" class="headerlink" title="20 Pixels"></a>20 Pixels</h2><p><img src="/images/vscodeIndentAfter.png" alt="With 20 pixel indentation"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my ol
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="http://rolias.github.io/tags/programming/"/>
+    
+      <category term="vscode" scheme="http://rolias.github.io/tags/vscode/"/>
+    
+  </entry>
   
   <entry>
     <title>Block 3rd Party Cookies in Chrome</title>
@@ -76,6 +101,29 @@
       
       
         &lt;p&gt;&lt;img src=&quot;/images/tennis-score.jpg&quot; alt=&quot;Tennis Scoring&quot;&gt;&lt;br&gt;I found it surprisingly hard to find an Apple Watch app for keeping score in
+      
+    
+    </summary>
+    
+    
+      <category term="apple watch" scheme="http://rolias.github.io/tags/apple-watch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apple Watch and Being on Time</title>
+    <link href="http://rolias.github.io/2020/01/02/on-time/"/>
+    <id>http://rolias.github.io/2020/01/02/on-time/</id>
+    <published>2020-01-03T00:06:11.922Z</published>
+    <updated>2020-01-03T23:58:05.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer would help much but after a couple of decades it still helps me. Until very recently I didn’t realize that a lot of digital watches support this crutch. The Apple Watch is my most recent timepiece and in <code>Settings-&gt;Clock</code> is an option for setting the watch face display time ahead. All that was required was touching the option, and then using the crown to adjust the amount of time from 1-&gt;59 minutes. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I wou
       
     
     </summary>

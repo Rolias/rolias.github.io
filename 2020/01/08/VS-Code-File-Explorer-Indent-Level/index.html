@@ -5,20 +5,23 @@
   
 
   
-  <title>Storing the Hexo Site in GitHub | Tod&#39;s Tech Tomes</title>
+  <title>VS Code File Explorer Indent Level | Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Now that you learned in Part 1 -&amp;gt; Blogging with Hexo and GitHubPages how to get your site up on [username].github.io, you need a repository that stores your original markdown and any changes you ma">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my old eyes. When I went to the settings I couldn’t find the option">
+<meta name="keywords" content="programming,vscode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Storing the Hexo Site in GitHub">
-<meta property="og:url" content="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/index.html">
+<meta property="og:title" content="VS Code File Explorer Indent Level">
+<meta property="og:url" content="http://rolias.github.io/2020/01/08/VS-Code-File-Explorer-Indent-Level/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
-<meta property="og:description" content="Now that you learned in Part 1 -&amp;gt; Blogging with Hexo and GitHubPages how to get your site up on [username].github.io, you need a repository that stores your original markdown and any changes you ma">
+<meta property="og:description" content="In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my old eyes. When I went to the settings I couldn’t find the option">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-19T22:15:08.568Z">
+<meta property="og:image" content="http://rolias.github.io/images/vscodeIndentBefore.png">
+<meta property="og:image" content="http://rolias.github.io/images/vscodeIndentAfter.png">
+<meta property="og:updated_time" content="2020-01-08T19:20:13.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Storing the Hexo Site in GitHub">
-<meta name="twitter:description" content="Now that you learned in Part 1 -&amp;gt; Blogging with Hexo and GitHubPages how to get your site up on [username].github.io, you need a repository that stores your original markdown and any changes you ma">
+<meta name="twitter:title" content="VS Code File Explorer Indent Level">
+<meta name="twitter:description" content="In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my old eyes. When I went to the settings I couldn’t find the option">
+<meta name="twitter:image" content="http://rolias.github.io/images/vscodeIndentBefore.png">
   
     <link rel="alternate" href="/atom.xml" title="Tod&#39;s Tech Tomes" type="application/atom+xml">
   
@@ -69,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo-blog-pt-2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-VS-Code-File-Explorer-Indent-Level" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/05/04/hexo-blog-pt-2/" class="article-date">
-  <time datetime="2019-05-04T20:59:19.000Z" itemprop="datePublished">2019-05-04</time>
+    <a href="/2020/01/08/VS-Code-File-Explorer-Indent-Level/" class="article-date">
+  <time datetime="2020-01-08T08:00:00.000Z" itemprop="datePublished">2020-01-08</time>
 </a>
     
   </div>
@@ -83,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Storing the Hexo Site in GitHub
+      VS Code File Explorer Indent Level
     </h1>
   
 
@@ -91,19 +94,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Now that you learned in Part 1 -&gt; <a href="https://rolias.github.io/2019/05/03/using-hexo/">Blogging with Hexo and GitHubPages</a> how to get your site up on <code>[username].github.io</code>, you need a repository that stores your original markdown and any changes you make to the files that generate your blog.  </p>
-<h2 id="1-Create-a-New-Repository"><a href="#1-Create-a-New-Repository" class="headerlink" title="1. Create a New Repository"></a>1. Create a New Repository</h2><p>Create a new repository in GitHub. Don’t add a <code>ReadMe</code> to it; just create the empty repository.  GitHub will show you a section titled</p>
-<h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><p>  Underneath that are two commands that you can copy to the clipboard with the clipboard icon to the right.  We’ll use these commands after the next step.</p>
-<h2 id="2-git-init-finally"><a href="#2-git-init-finally" class="headerlink" title="2. git init (finally)"></a>2. git init (finally)</h2><p>Open a terminal window at the root level of your hexo site. NOW you can do a <code>git init</code>,  then add all your files, and do a normal commit. You’ll notice that the previous process of setting up Hexo did create a <code>.gitignore</code> file for you that will ignore all the generated files.  </p>
-<h2 id="3-Link-and-Sync"><a href="#3-Link-and-Sync" class="headerlink" title="3. Link and Sync"></a>3. Link and Sync</h2><p>Take the copied commands from GitHub and paste those into the terminal. This will both link your local repo to GitHub and push up the changes.</p>
+        <p>In Visual Studio Code the Explorer panel indents items under a folder by a whopping 8 pixels by default. That’s just not enough for my old eyes. When I went to the settings I couldn’t find the option to adjust it. Then I went a-googling and found some .css hack workarounds but those results were over a year old. A little more searching revealed that it’s now a configurable feature.  </p>
+<ol>
+<li>Open the  Settings (Code-&gt;Preference-&gt;Settings or <code>⌘,</code> on macOs)</li>
+<li>Search with <code>tree indent</code></li>
+<li>You should see <code>Workbench-&gt;Tree: Indent</code></li>
+<li>Change the default value to one more to your liking. I found that 20 was a better balance of indentation visibility and horizontal space usage.</li>
+</ol>
+<h2 id="8-Pixels"><a href="#8-Pixels" class="headerlink" title="8 Pixels"></a>8 Pixels</h2><p><img src="/images/vscodeIndentBefore.png" alt="With 8 pixel indentation"></p>
+<h2 id="20-Pixels"><a href="#20-Pixels" class="headerlink" title="20 Pixels"></a>20 Pixels</h2><p><img src="/images/vscodeIndentAfter.png" alt="With 20 pixel indentation"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/04/hexo-blog-pt-2/" data-id="ck55oyeww000929s02athwr5v" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2020/01/08/VS-Code-File-Explorer-Indent-Level/" data-id="ck55oyewz000d29s0xosjgzo3" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
 
     </footer>
   </div>
@@ -111,19 +118,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/02/Apple-Watch-and-Audible/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Apple Watch and Audible Book Syncing
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/03/using-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Blogging with Hexo and GitHub Pages</div>
+      <div class="article-nav-title">Block 3rd Party Cookies in Chrome</div>
     </a>
   
 </nav>
