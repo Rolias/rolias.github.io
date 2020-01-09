@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2020-01-09T23:23:04.523Z</updated>
+  <updated>2020-01-09T23:27:03.062Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://rolias.github.io/2020/01/09/on-time/"/>
     <id>http://rolias.github.io/2020/01/09/on-time/</id>
     <published>2020-01-09T23:23:04.000Z</published>
-    <updated>2020-01-09T23:23:04.523Z</updated>
+    <updated>2020-01-09T23:27:03.062Z</updated>
     
-    <content type="html"><![CDATA[<p>One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer would help much but after a couple of decades it still helps me. Until very recently I didn’t realize that a lot of digital watches support this crutch. The Apple Watch is my most recent timepiece and in <code>Settings-&gt;Clock</code> is an option for setting the watch face display time ahead. All that was required was touching the option, and then using the crown to adjust the amount of time from 1-&gt;59 minutes. </p>]]></content>
+    <content type="html"><![CDATA[<p>One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer wouldn’t help much but after a couple of decades it is still useful. Until very recently I didn’t realize that a lot of digital watches support this crutch. The Apple Watch is my most recent timepiece and in <code>Settings-&gt;Clock</code> is an option for setting the watch face display time ahead. All that was required was touching the option, and then using the crown to adjust the amount of time from 1-&gt;59 minutes. It’s not a universal setting. The watch still keeps track of the real time and many features still use the real time but when I glance down at the watch face I get the false time, but enough buffer to get to the next meeting on time.</p>]]></content>
     
     <summary type="html">
     
