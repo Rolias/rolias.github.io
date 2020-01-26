@@ -5,20 +5,25 @@
   
 
   
-  <title>Apple Watch and Being on Time | Tod&#39;s Tech Tomes</title>
+  <title>Is Your VPN Killing Your Network Connection? | Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer wouldn’t help much but af">
-<meta name="keywords" content="apple watch">
+  <meta name="description" content="OverviewIf you use VPN on MacOS you may notice that if you leave the VPN running for a while your normal network operations are affected. It would appear the VPN software may not be properly restorin">
+<meta name="keywords" content="macos">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apple Watch and Being on Time">
-<meta property="og:url" content="http://rolias.github.io/2020/01/09/on-time/index.html">
+<meta property="og:title" content="Is Your VPN Killing Your Network Connection?">
+<meta property="og:url" content="http://rolias.github.io/2020/01/25/Connection/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
-<meta property="og:description" content="One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer wouldn’t help much but af">
+<meta property="og:description" content="OverviewIf you use VPN on MacOS you may notice that if you leave the VPN running for a while your normal network operations are affected. It would appear the VPN software may not be properly restorin">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-09T23:27:03.062Z">
+<meta property="og:image" content="http://rolias.github.io/images/dns/ping-fail.png">
+<meta property="og:image" content="http://rolias.github.io/images/dns/fix1.png">
+<meta property="og:image" content="http://rolias.github.io/images/dns/fix2.png">
+<meta property="og:image" content="http://rolias.github.io/images/dns/fix3.png">
+<meta property="og:updated_time" content="2020-01-26T01:05:26.588Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Apple Watch and Being on Time">
-<meta name="twitter:description" content="One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer wouldn’t help much but af">
+<meta name="twitter:title" content="Is Your VPN Killing Your Network Connection?">
+<meta name="twitter:description" content="OverviewIf you use VPN on MacOS you may notice that if you leave the VPN running for a while your normal network operations are affected. It would appear the VPN software may not be properly restorin">
+<meta name="twitter:image" content="http://rolias.github.io/images/dns/ping-fail.png">
   
     <link rel="alternate" href="/atom.xml" title="Tod&#39;s Tech Tomes" type="application/atom+xml">
   
@@ -69,10 +74,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-on-time" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Connection" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/01/09/on-time/" class="article-date">
-  <time datetime="2020-01-09T23:23:04.000Z" itemprop="datePublished">2020-01-09</time>
+    <a href="/2020/01/25/Connection/" class="article-date">
+  <time datetime="2020-01-26T00:38:30.000Z" itemprop="datePublished">2020-01-25</time>
 </a>
     
   </div>
@@ -83,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Apple Watch and Being on Time
+      Is Your VPN Killing Your Network Connection?
     </h1>
   
 
@@ -91,15 +96,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>One thing I loved about my analog watch is that I could set it five minutes ahead of the actual time. You would think after a while I would adjust and that five minute buffer wouldn’t help much but after a couple of decades it is still useful. Until very recently I didn’t realize that a lot of digital watches support this crutch. The Apple Watch is my most recent timepiece and in <code>Settings-&gt;Clock</code> is an option for setting the watch face display time ahead. All that was required was touching the option, and then using the crown to adjust the amount of time from 1-&gt;59 minutes. It’s not a universal setting. The watch still keeps track of the real time and many features still use the real time but when I glance down at the watch face I get the false time, but enough buffer to get to the next meeting on time.</p>
+        <p><img src="/images/dns/ping-fail.png" alt="Terminal Ping Failure"></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>If you use VPN on MacOS you may notice that if you leave the VPN running for a while your normal network operations are affected. It would appear the VPN software may not be properly restoring your DNS (Domain Name Server). Here’s how to find out if that’s the problem, and how to fix it.</p>
+<h2 id="Is-it-a-DNS-problem"><a href="#Is-it-a-DNS-problem" class="headerlink" title="Is it a DNS problem?"></a>Is it a DNS problem?</h2><p>Open the Terminal.app and ping a know IP address. The one I find easiest to remember is 1.1.1.1. If that responds, then ping a domain via its name.  In the image at the top you can see I pinged the DNS with no problem, but pinging <code>www.google.com</code> did not work. This is a good sign that you have a DNS problem.</p>
+<h2 id="Six-Step-Recovery-Process-faster-than-rebooting"><a href="#Six-Step-Recovery-Process-faster-than-rebooting" class="headerlink" title="Six Step Recovery Process (faster than rebooting)"></a>Six Step Recovery Process (faster than rebooting)</h2><p><strong>Step 1</strong> - Launch the Network System Preferences panel.<br><img src="/images/dns/fix1.png" alt="System Preferences"></p>
+<p><strong>Step 2</strong> - Click the Advanced… button. Spoiler alert, you’ll come back here to click Apply as the last step.<br><img src="/images/dns/fix2.png" alt="Network Preferences"></p>
+<p><strong>Step 3</strong> - click the DNS tab at the top of the Advanced window<br><img src="/images/dns/fix3.png" alt="Advanced Network Preferences"></p>
+<p><strong>Step 4</strong> - drag your <code>DNS Servers:</code> entries to be in a different order. If you only have one, add another one (either of the two shown here will work).</p>
+<p><strong>Step 5</strong> - Once you have a different DNS server on Top click <code>OK</code>.</p>
+<p>This will take you back to the previous screen and now you can do  </p>
+<p><strong>Step 6</strong> - click Apply.<br>Your network should be working properly. You can repeat the original terminal test or just use a browser to go to a page.  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2020/01/09/on-time/" data-id="ck5ubnmcz000a0ls0jizygfwm" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2020/01/25/Connection/" data-id="ck5ubnmct00050ls04n3ptkz8" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apple-watch/">apple watch</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macos/">macos</a></li></ul>
 
     </footer>
   </div>
@@ -107,19 +121,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/25/Connection/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Is Your VPN Killing Your Network Connection?
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/08/VS-Code-File-Explorer-Indent-Level/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/01/09/on-time/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">VS Code File Explorer Indent Level</div>
+      <div class="article-nav-title">Apple Watch and Being on Time</div>
     </a>
   
 </nav>
