@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rolias.github.io/"/>
-  <updated>2020-01-26T01:05:26.588Z</updated>
+  <updated>2020-01-27T17:28:53.906Z</updated>
   <id>http://rolias.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My New Favorite VS Code Extension</title>
+    <link href="http://rolias.github.io/2020/01/27/My-New-Favorite-VS-Code-Extension/"/>
+    <id>http://rolias.github.io/2020/01/27/My-New-Favorite-VS-Code-Extension/</id>
+    <published>2020-01-27T17:28:53.000Z</published>
+    <updated>2020-01-27T17:28:53.906Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Tech-Debt-Tracker"><a href="#Tech-Debt-Tracker" class="headerlink" title="Tech Debt Tracker"></a>Tech Debt Tracker</h2><p>Nobody likes technical debt and that’s why I love <a href="https://marketplace.visualstudio.com/items?itemName=Stepsize.tech-debt-tracker" target="_blank" rel="noopener">Tech Debt Tracker for VSCode</a>. Not only does it do a great job of identifying technical debt in your existing code, it can keep you from introducing more debt. It has some collaboration tools I haven’t really explored yet but just the identification of technical debt is useful. The tool assigns a rating from <code>A</code> (good) to <code>E</code> (ugh) to your code. An <code>A</code> rating is saying <em>This code is clean, easy to maintain, and likely to be bug-free</em>. Who doesn’t want that?</p><p>I’ve been using the tool for several months of TypeScript development and I’ve come to believe the metrics used are valuable and accurate. Rarely will I disagree with the results. Speaking of results, they are broken out into multiple categories like, nesting depth, understandability, argument count and a few others. You can see the details inline in your editor and make a decision about what’s important to you to fix. There is also a <code>Debt Ratings</code> panel in the explorer so you can get an overview of the ratings of all the methods in a file.</p><h2 id="Greenfield"><a href="#Greenfield" class="headerlink" title="Greenfield"></a>Greenfield</h2><p>If you’re lucky enough to be coding on a brand new project just use the tool to monitor your code development and strive to make every method an <code>A</code>. It’s fine to code up a <code>B</code> or <code>C</code> in the heat of battle.  But before you release, refactor with a goal of A for everything. If for some reason you can’t, decide if that’s a <code>//TODO</code> or <code>//FIX</code> for the future or at least a notation about why you left it less than pristine shape. Sometimes the comment metric can get in the way. </p><h2 id="The-Boy-Scout-Rule"><a href="#The-Boy-Scout-Rule" class="headerlink" title="The Boy Scout Rule"></a>The Boy Scout Rule</h2><p>You should always leave your code cleaner than you found it. When you need to work on a method, and the Tech Debt Tracker grade goes down, you should fix it so that it’s no worse than when you started. If it wasn’t an A when you started you might consider doing future you a favor and making it an A before you consider yourself done.</p><h2 id="Targeted-Refactoring"><a href="#Targeted-Refactoring" class="headerlink" title="Targeted Refactoring"></a>Targeted Refactoring</h2><p>Tech Debt Tracker can also be used to triage refactoring work. Look through the code base and find some code with the worst ratings. I would like to see a way for the tool to automatically find the worst code but at the moment that isn’t available.  </p><h2 id="Go-Egoless"><a href="#Go-Egoless" class="headerlink" title="Go Egoless"></a>Go Egoless</h2><p>Try it out and leave your ego someplace safe. I had a lot of code that didn’t get an <code>A</code>. Sometimes I thought the tool was crazy, but I refactored anyway. In almost all cases, when I was done I had to admit my code had improved. In the (very) few cases where I didn’t think the code was more understandable, I just reverted to my original code. I figured after doing this for 40 years I had some instincts I could trust. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Tech-Debt-Tracker&quot;&gt;&lt;a href=&quot;#Tech-Debt-Tracker&quot; class=&quot;headerlink&quot; title=&quot;Tech Debt Tracker&quot;&gt;&lt;/a&gt;Tech Debt Tracker&lt;/h2&gt;&lt;p&gt;Nobody lik
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="http://rolias.github.io/tags/programming/"/>
+    
+  </entry>
   
   <entry>
     <title>Is Your VPN Killing Your Network Connection?</title>

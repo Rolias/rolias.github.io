@@ -5,12 +5,12 @@
   
 
   
-  <title>Archives: 2020/1 | Tod&#39;s Tech Tomes</title>
+  <title>Tod&#39;s Tech Tomes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="personal blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tod&#39;s Tech Tomes">
-<meta property="og:url" content="http://rolias.github.io/archives/2020/01/index.html">
+<meta property="og:url" content="http://rolias.github.io/page/2/index.html">
 <meta property="og:site_name" content="Tod&#39;s Tech Tomes">
 <meta property="og:description" content="personal blog">
 <meta property="og:locale" content="default">
@@ -69,171 +69,57 @@
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/27/My-New-Favorite-VS-Code-Extension/" class="archive-article-date">
-  <time datetime="2020-01-27T17:28:53.000Z" itemprop="datePublished">Jan 27</time>
+    <article id="post-first-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/02/first-post/" class="article-date">
+  <time datetime="2019-05-03T01:44:20.000Z" itemprop="datePublished">2019-05-02</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/27/My-New-Favorite-VS-Code-Extension/">My New Favorite VS Code Extension</a>
+      <a class="article-title" href="/2019/05/02/first-post/">Don&#39;t use `export default` in TypeScript</a>
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/25/Connection/" class="archive-article-date">
-  <time datetime="2020-01-26T00:38:30.000Z" itemprop="datePublished">Jan 25</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/25/Connection/">Is Your VPN Killing Your Network Connection?</a>
-    </h1>
-  
+        <p>I was working on an <a href="https://www.npmjs.com/package/trello-helper" target="_blank" rel="noopener">npm package</a> written in TypeScript. I anticipated that the package would be used by programmers using JavaScript and TypeScript. Using <code>export default</code> works fine in TypeScript. Consuming a default class looks like this:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Trello <span class="keyword">from</span> <span class="string">'trello-helper'</span></span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello()</span><br></pre></td></tr></table></figure>
+<p>The JavaScript users are not so lucky, they need to add a reference to the export named “default.”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Trello = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello.default();</span><br></pre></td></tr></table></figure>
+<p>This requirement strikes me as very non-intuitive for JavaScript users. Since the savings from using the default export is a pair of curly braces, and we’re all good at typing curly braces, I decided to no longer use <code>export default</code> in my code. That way the JavaScript import becomes the much more familiar:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Trello &#125; = <span class="built_in">require</span>(<span class="string">"trello-helper"</span>);</span><br><span class="line"><span class="keyword">const</span> trello = <span class="keyword">new</span> Trello();</span><br></pre></td></tr></table></figure>
+<p>In his <a href="https://stackoverflow.com/questions/55940063/why-does-using-typescript-class-in-javascript-require-default" target="_blank" rel="noopener">stack<strong>overflow</strong> answer</a> to my question around the need for <code>.default</code>, Simon Chan pointed out a nice workaround. As nice as that workaround is, I think I’ll stick with not using <code>export default</code>.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/09/on-time/" class="archive-article-date">
-  <time datetime="2020-01-09T23:23:04.000Z" itemprop="datePublished">Jan 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/09/on-time/">Apple Watch and Being on Time</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/08/VS-Code-File-Explorer-Indent-Level/" class="archive-article-date">
-  <time datetime="2020-01-08T19:00:00.000Z" itemprop="datePublished">Jan 8</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="ck5wq80k00006ahs0x1uefje5" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/VS-Code-File-Explorer-Indent-Level/">VS Code File Explorer Indent Level</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/" class="archive-article-date">
-  <time datetime="2020-01-07T08:00:00.000Z" itemprop="datePublished">Jan 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/">Block 3rd Party Cookies in Chrome</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/06/Apple-Watch-and-Custom-Monograms/" class="archive-article-date">
-  <time datetime="2020-01-06T22:50:26.000Z" itemprop="datePublished">Jan 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/06/Apple-Watch-and-Custom-Monograms/">Apple Watch and Custom Monograms</a>
-    </h1>
+
+
   
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/03/tennis-score/" class="archive-article-date">
-  <time datetime="2020-01-03T23:57:19.000Z" itemprop="datePublished">Jan 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/03/tennis-score/">Apple Watch and Tennis Score Keeping</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
+  <nav id="page-nav">
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/01/02/Apple-Watch-and-Audible/" class="archive-article-date">
-  <time datetime="2020-01-02T22:39:39.000Z" itemprop="datePublished">Jan 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/02/Apple-Watch-and-Audible/">Apple Watch and Audible Book Syncing</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </section>
         
