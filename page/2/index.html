@@ -69,6 +69,74 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-using-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/03/using-hexo/" class="article-date">
+  <time datetime="2019-05-03T18:03:21.000Z" itemprop="datePublished">2019-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/03/using-hexo/">Blogging with Hexo and GitHub Pages</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I just started using <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> for this blog, and I had a little trouble getting started. Mostly my normal node.js coding process got in the way. I created a folder for the project, did a <code>git init</code> and started on the process. That was a mistake. It turns out an important “step” is not to do anything with git. You do need to create a new repo in GitHub pages and name it [username].github.io where you replace [username] with your GitHub username (i.e., for me rolias.github.io). Your repo needs this exact naming convention. Don’t create a readme, don’t do anything else with GitHub or git, let Hexo handle everything else.</p>
+<h2 id="Step-by-Step"><a href="#Step-by-Step" class="headerlink" title="Step by Step"></a>Step by Step</h2><h3 id="1-Install-Hexo-globally"><a href="#1-Install-Hexo-globally" class="headerlink" title="1. Install Hexo globally"></a>1. Install Hexo globally</h3><p>I know you hate to install things globally. Do it anyway.<br><code>npm install -g hexo-cli</code><br>You can verify it installed by checking the version<br><code>hexo -v</code><br>If you don’t get a response with version information, it didn’t install correctly.</p>
+<h3 id="2-Create-the-project"><a href="#2-Create-the-project" class="headerlink" title="2. Create the project"></a>2. Create the project</h3><p>Go to a folder where you want to store the entire project and enter<br><code>hexo init [username].github.io</code><br>Remember here and in all the following steps to replace <code>[username]</code> with your actual username as talked about in the introductory paragraph (I won’t tell you again, I promise).</p>
+<h3 id="3-Fire-it-up"><a href="#3-Fire-it-up" class="headerlink" title="3. Fire it up"></a>3. Fire it up</h3><p>Move into the newly created folder and then do an npm install.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> [username].github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="4-Configure-the-project-title-author-and-timezone"><a href="#4-Configure-the-project-title-author-and-timezone" class="headerlink" title="4. Configure the project title, author and timezone"></a>4. Configure the project title, author and timezone</h3><p>Use your favorite code editor and edit the <code>_config.yml</code> file. I prefer VS Code so at this point in the terminal I type <code>code .</code> and that loads the project. Near the top, you’ll see the <code>#Site</code> section. Put in the title for your blog, the subtitle (if you use one), and put your name in the <code>author:</code> entry.  </p>
+<div class="bug"> <strong>Warning</strong> - If you don’t leave a space after the : for each entry the generator will complain.  </div>
+
+<p>In the timezone, you need to put a <a href="https://momentjs.com/timezone/" target="_blank" rel="noopener">moment compatible timezone</a>. Using their site click on the map to get the string needed for your timezone. For example, here on the west coast of the U.S., I use <code>America/Los Angeles.</code></p>
+<p>A little lower you’ll see the <code># URL</code> section. Enter your information for the <code>url:</code> entry. <code>http://[username].github.io/</code>.</p>
+<div class="tip"><strong>VSCode Tip</strong> - I love the built-in terminal window <code>View→Terminal (⌃`).</code> I like it so much I use two of them by using either the split terminal icon or the <code>⌘\</code> shortcut. Having two windows helps because we’re going to dedicate one terminal to run the server, but we want to issue Hexo terminal commands in the other pane.</div>
+
+<h3 id="5-Start-the-test-server"><a href="#5-Start-the-test-server" class="headerlink" title="5. Start the test server"></a>5. Start the test server</h3><p>In the terminal type <code>hexo server</code> - This isn’t completely necessary, but the odds are good you want to check out on your local server how your post looks before you deploy it up into GitHub. <em>I like to use the right terminal pane in VSCode for this.</em></p>
+<div class="remember"> <strong>Remember</strong> - any time you modify the <code>_config.yml</code> file, stop the server with <code>⌃c</code> and restart it to pick up the changes.</div>
+
+<h3 id="6-Test-the-site"><a href="#6-Test-the-site" class="headerlink" title="6. Test the site"></a>6. Test the site</h3><p>Open a browser and type in the address bar <code>localhost:4000</code>. Your new site will load and show you the default home page. After the next step, you can feel free to delete the sample default post.</p>
+<h3 id="7-Create-a-New-Post"><a href="#7-Create-a-New-Post" class="headerlink" title="7. Create a New Post"></a>7. Create a New Post</h3><p>In the terminal type</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'Your blog post title'</span></span><br></pre></td></tr></table></figure>
+<p>You’ll get some feedback about the file created in <code>source→_posts</code>. The file will contain the header with the title and date. You can now open that file in your editor and write your post.</p>
+<div class="tip"><strong>Tip</strong> - You’ll probably want to add some tags here. This is also another place to make sure you leave space after the <code>:</code> for each entry.</div>
+
+<p>Go back to your browser and hit refresh. My experience is that Hexo will automatically generate the new content on demand. There is also a <code>hexo generate —watch</code> command you can read about in the <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">hexo docs</a>. When your post is ready for the world, go to the next step.</p>
+<h3 id="8-Clean-and-Deploy"><a href="#8-Clean-and-Deploy" class="headerlink" title="8. Clean and Deploy"></a>8. Clean and Deploy</h3><p>You don’t have anything to clean yet, but it’s a good habit to do both every time. Type two commands</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Go back to your browser and enter <code>https://[username].github.io</code> . Your blog site is live and running in GitHub pages. Well almost. It can take a couple of minutes before GitHub catches up and pushes your changes live. Another reason to use a test server. </p>
+<div class="tip" style="margin-right:50px"><strong>Script Tip</strong> - You can edit your <code>package.json</code> and add a script that will do both the clean and deploy steps. Add this section<br><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "deploy": "hexo clean; hexo deploy"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><br><br></div>
+
+<p>Now from the terminal you can type <code>npm run deploy</code> to deploy your changes to GitHub.</p>
+<h3 id="9-Storing-the-Hexo-Site-in-GitHub"><a href="#9-Storing-the-Hexo-Site-in-GitHub" class="headerlink" title="9. Storing the Hexo Site in GitHub"></a>9. Storing the Hexo Site in GitHub</h3><p>That’s a blog for another day, and that <a href="https://rolias.github.io/2019/05/04/hexo-blog-pt-2/">day has arrived</a>.</p>
+<h4 id="References-and-Shout-Outs"><a href="#References-and-Shout-Outs" class="headerlink" title="References and Shout Outs"></a>References and Shout Outs</h4><p><a href="https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39" target="_blank" rel="noopener">This gist</a> from btfak - which has a more laconic version of many of these steps.<br><a href="https://www.poweredbyjeff.com/2018/05/14/Deploying-Hexo-website-to-Github-Pages/" target="_blank" rel="noopener">Jeff Ferrari post</a> on taking advantage of the GitHub <code>docs</code> folder to publish posts instead of using your username.github.io page.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://rolias.github.io/2019/05/03/using-hexo/" data-id="ck6d2to5l000l83s0rh2pfklt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-first-post" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/02/first-post/" class="article-date">
@@ -102,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="ck5wq80k00006ahs0x1uefje5" class="article-share-link">Share</a>
+      <a data-url="http://rolias.github.io/2019/05/02/first-post/" data-id="ck6d2to5i000g83s0df0keeqd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li></ul>
@@ -132,7 +200,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple-watch/">apple watch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macos/">macos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/">programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple-watch/">apple watch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life-tip/">life tip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macos/">macos</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/">programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
     </div>
   </div>
 
@@ -142,7 +210,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/apple-watch/" style="font-size: 20px;">apple watch</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/macos/" style="font-size: 10px;">macos</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/programming/" style="font-size: 16.67px;">programming</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a>
+      <a href="/tags/apple-watch/" style="font-size: 20px;">apple watch</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/life-tip/" style="font-size: 10px;">life tip</a> <a href="/tags/macos/" style="font-size: 10px;">macos</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/programming/" style="font-size: 16.67px;">programming</a> <a href="/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a>
     </div>
   </div>
 
@@ -151,7 +219,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
     </div>
   </div>
 
@@ -162,6 +230,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/02/07/Rechargeable-Batteries-Can-Save-Your-Sleep/">Rechargeable Batteries Can Save Your Sleep</a>
+          </li>
         
           <li>
             <a href="/2020/01/27/My-New-Favorite-VS-Code-Extension/">My New Favorite VS Code Extension</a>
@@ -177,10 +249,6 @@
         
           <li>
             <a href="/2020/01/08/VS-Code-File-Explorer-Indent-Level/">VS Code File Explorer Indent Level</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/07/Block-3rd-Party-Cookies-in-Chrome/">Block 3rd Party Cookies in Chrome</a>
           </li>
         
       </ul>
